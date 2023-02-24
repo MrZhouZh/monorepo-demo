@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import Hello from './components/Hello.vue';
+
 </script>
 
 <template>
-  <div>Hello Chow</div>
+  <Hello name="Chow" />
 </template>
 
 <style>
