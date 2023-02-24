@@ -4,7 +4,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 
-import { presetUno, presetAttributify, presetIcons } from 'unocss'
+import { presetAttributify, presetIcons, presetUno } from 'unocss'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,15 +13,15 @@ export default defineConfig({
     Components(),
     AutoImport({
       imports: [
-        'vue'
-      ]
+        'vue',
+      ],
     }),
     Unocss({
       presets: [
         presetUno(),
         presetAttributify(),
-        presetIcons()
-      ]
-    })
+        presetIcons(),
+      ],
+    }),
   ],
-}) 
+})
