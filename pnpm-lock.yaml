@@ -34,10 +34,15 @@ importers:
       '@unocss/reset': ^0.50.1
       '@vue/tsconfig': ^0.1.3
       eslint: ^8.34.0
+      fuse.js: ^6.6.2
       npm-run-all: ^4.1.5
+      timezones.json: ^1.6.1
       unocss: ^0.50.0
       unplugin-auto-import: ^0.15.0
       unplugin-vue-components: ^0.24.0
+    dependencies:
+      fuse.js: registry.npmmirror.com/fuse.js/6.6.2
+      timezones.json: registry.npmmirror.com/timezones.json/1.6.1
     devDependencies:
       '@antfu/eslint-config': registry.npmmirror.com/@antfu/eslint-config/0.35.2_eslint@8.34.0
       '@iconify-json/carbon': registry.npmmirror.com/@iconify-json/carbon/1.1.16
@@ -2900,6 +2905,13 @@ packages:
     version: 1.2.3
     dev: true
 
+  registry.npmmirror.com/fuse.js/6.6.2:
+    resolution: {integrity: sha512-cJaJkxCCxC8qIIcPBF9yGxY0W/tVZS3uEISDxhYIdtk8OL93pe+6Zj7LjCqVV4dzbqcriOZ+kQ/NE4RXZHsIGA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fuse.js/-/fuse.js-6.6.2.tgz}
+    name: fuse.js
+    version: 6.6.2
+    engines: {node: '>=10'}
+    dev: false
+
   registry.npmmirror.com/gensync/1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/gensync/-/gensync-1.0.0-beta.2.tgz}
     name: gensync
@@ -4812,6 +4824,12 @@ packages:
     name: text-table
     version: 0.2.0
     dev: true
+
+  registry.npmmirror.com/timezones.json/1.6.1:
+    resolution: {integrity: sha512-lAYx2w4qyN2nzJ7wNSxdaNEgWjvuBvN6/AzLdOAN0BsVAvKJVkOqApPvgOKYeESWe40Qrxc+KPVc9eQiy3iCZw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/timezones.json/-/timezones.json-1.6.1.tgz}
+    name: timezones.json
+    version: 1.6.1
+    dev: false
 
   registry.npmmirror.com/to-fast-properties/2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz}

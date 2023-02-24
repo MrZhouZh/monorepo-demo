@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import Hello from './components/Hello.vue';
-
+import { zones } from './composables/state'
 </script>
 
 <template>
-  <Hello name="Chow" />
+  <div border="~ gray/20" m2>
+    <ActionBar />
+    <pre>{{ zones }}</pre>
+  </div>
 </template>
 
 <style>

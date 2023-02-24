@@ -2,6 +2,10 @@
   "name": "what-time",
   "version": "0.0.0",
   "private": true,
+  "dependencies": {
+    "fuse.js": "^6.6.2",
+    "timezones.json": "^1.6.1"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.2",
     "@iconify-json/carbon": "^1.1.16",
