@@ -5,9 +5,12 @@
   "private": true,
   "scripts": {
     "dev:vue-demo1": "vite packages/vue-demo1",
-    "dev:vue-demo2": "vite packages/vue-demo2"
+    "dev:vue-demo2": "vite packages/vue-demo2",
+    "dev:what-time": "vite packages/what-time"
   },
-  "keywords": ["monorepo"],
+  "keywords": [
+    "monorepo"
+  ],
   "author": "Jace",
   "license": "ISC",
   "dependencies": {
