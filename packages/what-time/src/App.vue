@@ -1,16 +1,18 @@
 <script setup lang="ts">
-import { zones } from './composables/state'
 </script>
 
 <template>
-  <div border="~ gray/20" m2>
-    <ActionBar />
-    <pre>{{ zones }}</pre>
+  <div font-sans bg-canvas h-screen>
+    <NavBar />
+    <div border="~ base rounded" bg-base shadow mx8>
+      <ActionBar />
+      <TimeSchedular />
+    </div>
   </div>
 </template>
 
 <style>
-html {
+.dark {
   background-color: #222;
   color: #fff;
   color-scheme: dark;

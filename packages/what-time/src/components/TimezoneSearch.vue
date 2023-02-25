@@ -8,8 +8,16 @@ const fuse = new Fuse(timezones, {
 
 let input = $ref('')
 let index = $ref(0)
-const searchResult = computed(() => {
+const searchResult = $computed(() => {
   return fuse.search(input)
+})
+
+const modal = ref<HTMLDivElement>()
+onClickOutside(modal, () => {
+  if (input) {
+    input = ''
+    index = 0
+  }
 })
 
 function add(t: Timezone) {
@@ -17,36 +25,39 @@ function add(t: Timezone) {
   input = ''
   index = 0
 }
+
+function onKeydown(e: KeyboardEvent) {
+  if (e.key === 'ArrowDown')
+    index = (index + 1) % searchResult.length
+  else if (e.key === 'ArrowUp')
+    index = (index - 1 + searchResult.length) % searchResult.length
+  else if (e.key === 'Enter')
+    add(searchResult[index].item)
+}
 </script>
 
 <template>
   <div relative>
     <input
-      v-model="input" type="text" placeholder="Seach timezone..." px2 py1 border="~ gray/15 rounded" bg-transparent
-      w-full
+      v-model="input" type="text" placeholder="Seach timezone..."
+      px3 py1 text-xl border="~ base rounded" bg-transparent w-full
     >
-    <div v-show="input" absolute bg-gray-900 top-full left-0 right-0>
+    <div
+      v-show="input"
+      ref="modal"
+      absolute top-full left-0 right-0 z-10
+      border="~ base rounded" shadow bg-base max-h-100 overflow-auto
+    >
       <button
-        v-for="i of searchResult"
-        :key="i.refIndex"
-        flex gap2
+        v-for="i, idx of searchResult"
+        :key="i.refIndex" flex gap2
+        block w-full px2 pb1 hover="bg-gray/5"
+        border="b base"
+        :class="idx === index ? 'bg-gray/10' : ''"
         @click="add(i.item)"
       >
-        <div font-mono w-10 text-right>
-          {{ i.item.offset }}
-        </div>
-        <div>
-          {{ i.item.name }}
-        </div>
+        <TimezoneItem :timezone="i.item" />
       </button>
     </div>
   </div>
 </template>
-
-<style>
-html {
-  background-color: #222;
-  color: #fff;
-  color-scheme: dark;
-}
-</style>
