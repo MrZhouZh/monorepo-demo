@@ -15,6 +15,10 @@ export default defineConfig({
       imports: [
         'vue',
       ],
+      dirs: [
+        './src/composables',
+      ],
+      vueTemplate: true,
     }),
     Unocss({
       presets: [

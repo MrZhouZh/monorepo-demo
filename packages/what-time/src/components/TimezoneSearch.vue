@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import Fuse from 'fuse.js'
-import { timezones } from '../composables/data'
-import { addToTimezone } from '../composables/state'
 import type { Timezone } from '../types'
 
 const fuse = new Fuse(timezones, {
@@ -32,7 +30,7 @@ function add(t: Timezone) {
         v-for="i of searchResult"
         :key="i.refIndex"
         flex gap2
-        @click="addToTimezone(i.item)"
+        @click="add(i.item)"
       >
         <div font-mono w-10 text-right>
           {{ i.item.offset }}
