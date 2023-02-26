@@ -41,6 +41,7 @@ function onKeydown(e: KeyboardEvent) {
     <input
       v-model="input" type="text" placeholder="Seach timezone..."
       px3 py1 text-xl border="~ base rounded" bg-transparent w-full
+      @keydown="onKeydown"
     >
     <div
       v-show="input"
