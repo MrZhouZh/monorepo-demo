@@ -19,7 +19,10 @@ importers:
 
   packages/vue-demo1:
     specifiers:
+      '@libs/core': workspace:^1.0.0
       unocss: ^0.50.0
+    dependencies:
+      '@libs/core': link:../../libs/core
     devDependencies:
       unocss: registry.npmmirror.com/unocss/0.50.0
 

@@ -1,3 +1,4 @@
 paakages:
+  - 'libs/*'
   - 'packages/*'
 

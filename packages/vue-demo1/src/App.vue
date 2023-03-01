@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { add } from '@libs/core'
 import HelloWorld from './components/HelloWorld.vue'
+
+console.log('add >>>', add(1, 2))
 </script>
 
 <template>

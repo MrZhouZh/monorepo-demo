@@ -2,7 +2,13 @@
   "name": "vue-demo1",
   "private": true,
   "version": "0.0.0",
+  "scripts": {
+    "dev": "vite"
+  },
   "devDependencies": {
     "unocss": "^0.50.0"
+  },
+  "dependencies": {
+    "@libs/core": "workspace:^1.0.0"
   }
 }
