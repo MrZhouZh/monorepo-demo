@@ -19,10 +19,6 @@ function rounded(x: number) {
   return n * dayCellWidth
 }
 
-// whenever(pressed, (i) => {
-//   edgeStart = rounded(x.value - box.left)
-//   edgeEnd = edgeStart
-// }, { flush: 'sync' })
 whenever(pressed, (i) => {
   edgeStart = rounded(x.value - box.left)
   edgeEnd = edgeStart
