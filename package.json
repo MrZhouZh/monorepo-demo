@@ -9,7 +9,9 @@
     "dev:what-time": "vite packages/what-time",
     "build:what-time": "vite build packages/what-time",
     "preview:what-time": "vite preview --port 4001 packages/what-time",
-    "build:unbuild": "pnpm -F unbuild-demo build"
+    "build:unbuild": "pnpm -F unbuild-demo build",
+    "dev:rollup": "pnpm -F rollup-demo dev",
+    "docs:rollup": "pnpm -F rollup-demo docs"
   },
   "keywords": [
     "monorepo"
