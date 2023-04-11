@@ -7,7 +7,7 @@ import babel from '@rollup/plugin-babel';
 import alias from '@rollup/plugin-alias';
 
 export default {
-  input: 'index.ts',
+  input: './src/index.ts',
   output: [
     {
       file: 'dist/index.cjs',
@@ -20,7 +20,7 @@ export default {
     {
       file: 'dist/index.js',
       format: 'umd',
-      name: 'tools'
+      name: 'Tools'
     }
   ],
   plugins: [
@@ -31,7 +31,9 @@ export default {
     }),
     resolve(),
     alias(),
-    typescript(),
+    typescript({
+      tsconfig: 'tsconfig.json',
+    }),
     commonjs(),
     esbuild({
       minify: process.env.NODE_ENV === 'production'

@@ -11,23 +11,28 @@
 
   <script src="../dist/index.js"></script>
   <script>
+    const plugins = [
+      {
+        name: 'multiply',
+        apply(...args) {
+          return args.reduce((pre, cur) => pre *= cur)
+        }
+      },
+      {
+      name: 'division',
+        apply(...args) {
+          return args.reduce((pre, cur) => pre /= cur)
+        }
+      }
+    ]
+    const tools = new Tools({
+      plugins,
+    })
     console.log(tools)
+    console.log(tools.add(1, 2, 3, 4))
 
-    const person = new tools.Person({
-      name: 'jack',
-      age: 20,
-    })
-
-    const employee = new tools.Employee({
-      name: 'jace',
-      age: 24,
-      salary: 3000
-    })
-
-    person.sayHello()
-    employee.sayHello()
-    const sum = tools.Utils.add(1, 2, 3)
-    console.log(sum)
+    console.log(tools.applyPlugins('multiply', 2, 3))
+    console.log(tools.applyPlugins('division', 8, 2))
   </script>
 </body>
 </html>

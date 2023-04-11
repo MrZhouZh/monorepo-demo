@@ -7,12 +7,18 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "declaration": true,
 
     "strict": true,
     "strictNullChecks": true,
     "skipLibCheck": true
   },
+  "include": ["src/**/*"],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    "**/*.spec.ts"
   ]
 }

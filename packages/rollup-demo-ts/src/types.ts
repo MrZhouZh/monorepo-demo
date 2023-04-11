@@ -1,16 +1,8 @@
-export interface IPersonOptions {
+export interface IPlugin {
   name: string
-  age: number
+  apply(...args: any[]): void
 }
 
-export interface IUtils {
-  add(...args: number[]): number
-}
-
-export interface IEmployeeOptions extends IPersonOptions {
-  salary: number
-}
-
-export interface IExtendedUtils extends IUtils {
-  substract(...args: number[]): number;
+export interface IToolsOptions {
+  plugins?: IPlugin[]
 }
