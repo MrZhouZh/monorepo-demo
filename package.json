@@ -6,6 +6,7 @@
   "scripts": {
     "dev:vue-demo1": "pnpm -F vue-demo1 dev",
     "dev:vue-demo2": "vite packages/vue-demo2",
+    "dev:vue-ssr-01": "pnpm --filter vue-ssr-01 dev",
     "dev:what-time": "vite packages/what-time",
     "build:what-time": "vite build packages/what-time",
     "preview:what-time": "vite preview --port 4001 packages/what-time",

@@ -1,0 +1,13 @@
+{
+  "name": "vue-ssr-01",
+  "version": "1.0.0",
+  "description": "A example of Vue SSR",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "devDependencies": {
+    "express": "^4.18.2"
+  }
+}
